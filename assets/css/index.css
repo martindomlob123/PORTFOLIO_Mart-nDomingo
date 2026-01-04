@@ -2,3 +2,255 @@
 @import url("base.css");
 @import url("layout.css");
 @import url("components.css");
+
+/* ===================================
+   RESET Y CONFIGURACIÓN BASE
+   Elimina márgenes por defecto y establece box-sizing
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================
+   TIPOGRAFÍA PERSONALIZADA
+   Importa la fuente Gambarino para el portfolio
+=================================== */
+@font-face {
+  font-family: "Gambarino-Regular";
+  src: url("../fonts/Gambarino-Regular.woff2") format("woff2"),
+    url("../fonts/Gambarino-Regular.woff") format("woff"),
+    url("../fonts/Gambarino-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* ===================================
+   ESTILOS GENERALES DEL BODY
+   Fondo negro con texto blanco
+=================================== */
+body {
+  font-family: "Gambarino-Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   NAVEGACIÓN SUPERIOR
+   Barra fija en la parte superior con los 3 apartados
+=================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid #333333;
+}
+
+/* ===================================
+   ITEMS DEL MENÚ
+   Enlaces de navegación con efecto hover
+=================================== */
+.nav-item {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #888888;
+}
+
+/* Título central del menú (nombre) */
+.nav-center {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   SECCIÓN HERO
+   Espacio inicial debajo del navbar
+=================================== */
+.hero-section {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+.hero-title {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #172b4d;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #5e6c84;
+  line-height: 1.6;
+}
+
+/* ===================================
+   CONTENEDOR DEL SCROLL HORIZONTAL
+   Sección con efecto parallax y scroll horizontal
+=================================== */
+.parallax-section {
+  padding: 80px 0;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Contenedor que permite el scroll horizontal manual */
+.scroll-container {
+  display: flex;
+  gap: 60px;
+  padding: 0 60px 40px 60px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  cursor: grab;
+  /* Oculta la scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 60px;
+}
+
+/* ===================================
+   TARJETAS DE PROYECTO
+   Cada proyecto con imagen y texto emergente al hover
+   Tamaño grande: 2 tarjetas por pantalla
+=================================== */
+.project-card {
+  position: relative;
+  min-width: calc(50vw - 80px);
+  height: 85vh;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de fondo del proyecto */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ===================================
+   OVERLAY CON INFORMACIÓN
+   Texto que emerge desde abajo al hacer hover
+=================================== */
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+  color: white;
+  padding: 40px 30px 30px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  transform: translateY(0);
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   Ajustes para pantallas móviles
+=================================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .scroll-container {
+    padding: 0 30px 40px 30px;
+    gap: 24px;
+  }
+
+  .project-card {
+    min-width: calc(50vw - 60px);
+    height: 70vh;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}

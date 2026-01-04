@@ -3,9 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grade 1 Demo: Vanilla CSS Scroll</title>
+    <title>PORTFOLIO TEMPLATE</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
 
-  <body></body>
+  <body>
+    <!-- ===================================
+       BARRA DE NAVEGACIÓN
+       Menú superior fijo con tres apartados
+  =================================== -->
+    <nav class="navbar">
+      <a href="#about" class="nav-item">About me</a>
+      <div class="nav-item nav-center">Martín Domingo</div>
+      <a href="#archive" class="nav-item">Archive</a>
+    </nav>
+
+    <!-- ===================================
+       SECCIÓN DE PROYECTOS CON SCROLL HORIZONTAL
+       Galería de proyectos con efecto parallax
+  =================================== -->
+    <section class="parallax-section">
+      <div class="scroll-container" id="projectsScroll">
+        <div class="scroll-track" id="scrollTrack">
+          <!-- PROYECTO 1 -->
+          <div class="project-card" onclick="navigateToProject('project1')">
+            <img
+              src="https://ik.imagekit.io/martin1/f104845a-56cd-492f-a9f7-6fa975a6b52b.JPG"
+              alt="Proyecto 1"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">E-commerce Platform</h3>
+              <p class="project-description">
+                A modern e-commerce solution with seamless user experience and
+                responsive design.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROYECTO 2 -->
+          <div class="project-card" onclick="navigateToProject('project2')">
+            <img
+              src="https://ik.imagekit.io/martin1/a%20web-100.jpg"
+              alt="Proyecto 2"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Portfolio Dashboard</h3>
+              <p class="project-description">
+                Interactive dashboard for tracking portfolio performance with
+                real-time data visualization.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROYECTO 3 -->
+          <div class="project-card" onclick="navigateToProject('project3')">
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=1000&fit=crop"
+              alt="Proyecto 3"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Mobile Banking App</h3>
+              <p class="project-description">
+                Secure and intuitive mobile banking experience with biometric
+                authentication.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROYECTO 4 -->
+          <div class="project-card" onclick="navigateToProject('project4')">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=1000&fit=crop"
+              alt="Proyecto 4"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Analytics Platform</h3>
+              <p class="project-description">
+                Comprehensive analytics tool for business intelligence and
+                data-driven decisions.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROYECTO 5 -->
+          <div class="project-card" onclick="navigateToProject('project5')">
+            <img
+              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=1000&fit=crop"
+              alt="Proyecto 5"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Creative Agency Site</h3>
+              <p class="project-description">
+                Award-winning website showcasing creative work with stunning
+                animations.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROYECTO 6 -->
+          <div class="project-card" onclick="navigateToProject('project6')">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=1000&fit=crop"
+              alt="Proyecto 6"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Social Media Platform</h3>
+              <p class="project-description">
+                Modern social networking platform with real-time messaging and
+                content sharing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

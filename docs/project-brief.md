@@ -1,6 +1,6 @@
 # Project Brief
 
-_Student:_ [Your Name]  
+_Student:_ [Martín Domingo]  
 _Handle:_ @[your-github-username]  
 _Course:_ Web Design 2025 · Fall  
 _Date:_ [Fill in date - Week 2]
@@ -30,7 +30,7 @@ _Date:_ [Fill in date - Week 2]
 - [ ] HTML5 (semantic markup)
 - [ ] CSS3 (responsive design)
 - [ ] JavaScript (if applicable)
-- [ ] Other: _\\\__
+- [ ] Other: \_\\\_\_
 
 ### Accessibility Goals
 
