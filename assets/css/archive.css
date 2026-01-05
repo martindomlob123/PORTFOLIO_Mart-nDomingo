@@ -105,28 +105,104 @@ body {
 /* ===================================
    SECCIÓN DE INFORMACIÓN
 =================================== */
-.info-section {
-  padding: 40px 0;
-  border-top: 1px solid #333333;
-}
 
 .info-content {
-  max-width: 800px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding-left: 0%;
 }
 
 .info-title {
   font-size: 32px;
-  margin-bottom: 20px;
   font-family: "BBH Bogle", sans-serif;
+  min-width: 200px;
+  flex-shrink: 0;
 }
 
 .info-text {
   font-size: 16px;
   line-height: 1.8;
-  color: #cccccc;
+  color: #ffffff;
   font-family: "BBH Bogle", sans-serif;
+  flex: 1;
+  padding-left: 30%;
+}
+/* ===================================
+   GRID DE 4 IMÁGENES
+=================================== */
+.grid-four {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  height: 80vh;
 }
 
+.grid-four img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* ===================================
+   SECCIÓN DE INFORMACIÓN 2 (título a la derecha)
+=================================== */
+.info-content-right {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding-right: 0%;
+}
+
+.info-title-right {
+  font-size: 32px;
+  font-family: "BBH Bogle", sans-serif;
+  min-width: 200px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-left: 30%;
+}
+
+.info-text-right {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ffffff;
+  font-family: "BBH Bogle", sans-serif;
+  flex: 1;
+}
+
+/* Responsive para la nueva sección */
+@media (max-width: 768px) {
+  .grid-four {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+  }
+
+  .grid-four img {
+    height: 40vh;
+  }
+
+  .info-content-right {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .info-title-right {
+    padding-left: 0;
+    text-align: left;
+    font-size: 24px;
+    min-width: auto;
+  }
+
+  .info-text-right {
+    font-size: 14px;
+  }
+}
 /* ===================================
    RESPONSIVE
 =================================== */
@@ -149,8 +225,15 @@ body {
     height: 30vh;
   }
 
+  .info-content {
+    flex-direction: column;
+    padding-left: 0;
+    gap: 20px;
+  }
+
   .info-title {
     font-size: 24px;
+    min-width: auto;
   }
 
   .info-text {
