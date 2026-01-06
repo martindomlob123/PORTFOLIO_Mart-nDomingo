@@ -15,328 +15,48 @@
 
 /* ===================================
    TIPOGRAFÍA PERSONALIZADA
-   Importa la fuente BBH Bogle desde Google Fonts
+   Importa la fuente Space Grotesk desde Google Fonts
 =================================== */
-@import url("https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 /* ===================================
    ESTILOS GENERALES DEL BODY
    Fondo negro con texto blanco
 =================================== */
 body {
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
 }
-
 /* ===================================
-   NAVEGACIÓN SUPERIOR
-   Barra fija en la parte superior con los 3 apartados
+   IMAGEN CENTRAL CON EFECTO BLUR
 =================================== */
-.navbar {
+.center-image-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
 }
 
-/* ===================================
-   ITEMS DEL MENÚ
-   Enlaces de navegación con efecto hover
-=================================== */
-.nav-item {
-  font-size: 16px;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  cursor: pointer;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.nav-item:hover {
-  color: #888888;
-}
-
-/* ===================================
-   SECCIÓN HERO
-   Espacio inicial debajo del navbar
-=================================== */
-.hero-section {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-}
-
-.hero-content {
-  text-align: center;
-  max-width: 800px;
-  padding: 0 30px;
-}
-
-.hero-title {
-  font-size: 56px;
-  margin-bottom: 20px;
-  color: #ffffff;
-  line-height: 1.2;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.hero-subtitle {
-  font-size: 20px;
-  color: #ffffff;
-  line-height: 1.6;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-/* ===================================
-   CONTENEDOR DEL SCROLL HORIZONTAL
-   Sección con efecto parallax y scroll horizontal
-=================================== */
-.parallax-section {
-  padding: 80px 0;
-  background-color: #000000;
-  overflow: hidden;
-}
-
-/* Contenedor que permite el scroll horizontal manual */
-.scroll-container {
-  display: flex;
-  gap: 60px;
-  padding: 0 60px 40px 60px;
-  overflow-x: scroll;
-  overflow-y: visible;
-  scroll-behavior: smooth;
-  cursor: grab;
-  /* Oculta la scrollbar */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-.scroll-container:active {
-  cursor: grabbing;
-}
-
-.scroll-track {
-  display: flex;
-  gap: 60px;
-}
-
-/* ===================================
-   TARJETAS DE PROYECTO
-   Cada proyecto con imagen y texto emergente al hover
-   Tamaño grande: 2 tarjetas por pantalla
-=================================== */
-.project-card {
-  position: relative;
-  min-width: calc(50vw - 80px);
-  height: 85vh;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagen de fondo del proyecto */
-.project-image {
-  width: 100%;
-  height: 100%;
+.center-image {
+  width: 150px; /* CAMBIAR ANCHO AQUÍ */
+  height: 200px; /* CAMBIAR ALTO AQUÍ */
   object-fit: cover;
-  transition: filter 0.4s ease, transform 0.4s ease;
+  filter: blur(5px); /* CAMBIAR INTENSIDAD DEL BLUR AQUÍ */
+  transition: filter 0.4s ease;
+  cursor: pointer;
 }
 
-.project-card:hover .project-image {
-  filter: blur(8px);
-  transform: scale(1.05);
+.center-image:hover {
+  filter: blur(0px);
 }
 
-/* ===================================
-   OVERLAY CON INFORMACIÓN
-   Texto centrado vertical y horizontalmente con efecto blur
-=================================== */
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(0px);
-  color: white;
-  padding: 40px 30px;
-  opacity: 0;
-  transition: opacity 0.4s ease, backdrop-filter 0.4s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-  backdrop-filter: blur(4px);
-}
-
-.project-title {
-  font-size: 24px;
-  margin-bottom: 12px;
-  font-weight: 600;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.project-description {
-  font-size: 15px;
-  line-height: 1.6;
-  opacity: 0.95;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-/* ===================================
-   FOOTER
-   Pie de página en una sola línea
-=================================== */
-.footer {
-  background-color: #000000;
-  padding: 5px 5px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.footer-left {
-  flex: 1;
-}
-
-.footer-text {
-  font-size: 14px;
-  color: #888888;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.footer-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-links {
-  display: flex;
-  gap: 30px;
-}
-
-.footer-link {
-  font-size: 14px;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.footer-link:hover {
-  color: #888888;
-}
-
-.footer-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer-social {
-  display: flex;
-  gap: 30px;
-}
-
-.social-link {
-  font-size: 14px;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-family: "BBH Bogle", sans-serif;
-}
-
-.social-link:hover {
-  color: #888888;
-}
-
-/* ===================================
-   RESPONSIVE FOOTER
-=================================== */
+/* Responsive */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .footer-center,
-  .footer-right {
-    justify-content: center;
-  }
-
-  .footer-links,
-  .footer-social {
-    gap: 20px;
-  }
-}
-
-/* ===================================
-   RESPONSIVE DESIGN
-   Ajustes para pantallas móviles
-=================================== */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 20px 30px;
-  }
-
-  .nav-item {
-    font-size: 14px;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .scroll-container {
-    padding: 0 30px 40px 30px;
-    gap: 24px;
-  }
-
-  .project-card {
-    min-width: calc(50vw - 60px);
-    height: 70vh;
-  }
-
-  .section-title {
-    font-size: 24px;
+  .center-image {
+    width: 300px; /* CAMBIAR ANCHO MÓVIL AQUÍ */
+    height: 300px; /* CAMBIAR ALTO MÓVIL AQUÍ */
   }
 }

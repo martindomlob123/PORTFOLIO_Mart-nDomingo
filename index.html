@@ -7,161 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-
-  <body>
-    <!-- ===================================
-       BARRA DE NAVEGACIÓN
-       Menú superior fijo con tres apartados
-  =================================== -->
-    <nav class="navbar">
-      <a href="about.html" class="nav-item">About me</a>
-      <a href="index.html" class="nav-item">Martín Domingo</a>
-      <a href="archive.html" class="nav-item">Archive</a>
-    </nav>
-
-    <!-- ===================================
-       SECCIÓN DE PROYECTOS CON SCROLL HORIZONTAL
-       Galería de proyectos con efecto parallax
-  =================================== -->
-    <section class="parallax-section">
-      <div class="scroll-container" id="projectsScroll">
-        <div class="scroll-track" id="scrollTrack">
-          <!-- PROYECTO 1 -->
-          <div
-            class="project-card"
-            onclick="window.location.href='archive.html'"
-          >
-            <img
-              src="https://ik.imagekit.io/martin1/f104845a-56cd-492f-a9f7-6fa975a6b52b.JPG"
-              alt="Proyecto 1"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">CAVE studio</h3>
-              <p class="project-description">Music production collective.</p>
-            </div>
-          </div>
-
-          <!-- PROYECTO 2 -->
-          <div class="project-card" onclick="window.location.href='archive.html'">
-            <img
-              src="https://ik.imagekit.io/martin1/a%20web-100.jpg"
-              alt="Proyecto 2"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">ABUELA type</h3>
-              <p class="project-description">
-                Typeface inspired by old sewing guides.
-              </p>
-            </div>
-          </div>
-
-          <!-- PROYECTO 3 -->
-          <div class="project-card" onclick="navigateToProject('project3')">
-            <img
-              src="https://ik.imagekit.io/martin1/Mesa%20de%20trabajo%2012%20copia-100.jpg"
-              alt="Proyecto 3"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">CORREtorre</h3>
-              <p class="project-description">Running club branding.</p>
-            </div>
-          </div>
-
-          <!-- PROYECTO 4 -->
-          <div class="project-card" onclick="navigateToProject('project4')">
-            <img
-              src="https://ik.imagekit.io/martin1/Captura%20de%20pantalla%202026-01-05%20193035.png"
-              alt="Proyecto 4"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">TODO magazine</h3>
-              <p class="project-description">
-                Niche magazine featuring opinion articles.
-              </p>
-            </div>
-          </div>
-
-          <!-- PROYECTO 5 -->
-          <div class="project-card" onclick="navigateToProject('project5')">
-            <img
-              src="https://ik.imagekit.io/martin1/Captura%20de%20pantalla%202026-01-05%20193344.png"
-              alt="Proyecto 5"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">DnB</h3>
-              <p class="project-description">
-                Wine lowcost brand identity and packaging design.
-              </p>
-            </div>
-          </div>
-
-          <!-- PROYECTO 6 -->
-          <div class="project-card" onclick="navigateToProject('project6')">
-            <img
-              src="https://ik.imagekit.io/martin1/Captura%20de%20pantalla%202026-01-05%20194603.png"
-              alt="Proyecto 6"
-              class="project-image"
-            />
-            <div class="project-overlay">
-              <h3 class="project-title">Reciclatumusica.es</h3>
-              <p class="project-description">
-                Web design for a recycle initiative.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================
-       FOOTER
-       Información de contacto y redes sociales en una línea
-  =================================== -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-left">
-          <p class="footer-text">© 2026 Martín Domingo</p>
-        </div>
-
-        <div class="footer-center">
-          <div class="footer-links">
-            <a href="about.html" class="footer-link">About me</a>
-            <a href="index.html" class="footer-link">Martín Domingo</a>
-            <a href="archive.html" class="footer-link">Archive</a>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <div class="footer-social">
-            <a href="https://linkedin.com" target="_blank" class="social-link"
-              >LinkedIn</a
-            >
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              class="social-link"
-              >Instagram</a
-            >
-            <a href="https://twitter.com" target="_blank" class="social-link"
-              >Twitter</a
-            >
-            <a href="mailto:martindomlob@gmail.com" class="social-link"
-              >Email</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
 </html>
+<!-- ===================================
+       IMAGEN CENTRAL CON EFECTO BLUR INDEX
+  =================================== -->
+<div
+  class="center-image-container"
+  onclick="window.location.href='home.html'"
+  style="cursor: pointer"
+>
+  <img
+    src="https://ik.imagekit.io/martin1/FOT3.jpeg"
+    alt="Centro"
+    class="center-image"
+  />
+</div>

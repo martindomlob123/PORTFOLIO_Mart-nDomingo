@@ -11,7 +11,7 @@
    ESTILOS GENERALES
 =================================== */
 body {
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
@@ -40,7 +40,7 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
   cursor: pointer;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .nav-item:hover {
@@ -51,7 +51,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* ===================================
@@ -94,7 +94,7 @@ body {
 .footer-text {
   font-size: 14px;
   color: #888888;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .footer-center {
@@ -113,7 +113,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .footer-link:hover {
@@ -136,7 +136,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .social-link:hover {
@@ -198,14 +198,14 @@ body {
   font-size: 26px;
   font-weight: 600;
   color: #ffffff;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .paragraph-text {
   font-size: 18px;
   line-height: 1.6;
   color: #ffffff;
-  font-family: "BBH Bogle", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* ===================================

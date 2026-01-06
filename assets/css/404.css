@@ -1,0 +1,110 @@
+/* ===================================
+   RESET Y CONFIGURACIÓN BASE
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================
+   ESTILOS GENERALES
+=================================== */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ===================================
+   CONTENEDOR 404
+=================================== */
+.container-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content-404 {
+  text-align: center;
+  padding: 40px 30px;
+  max-width: 600px;
+}
+
+.title-404 {
+  font-size: 120px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.subtitle-404 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.description-404 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.btn-404 {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.btn-404:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+@media (max-width: 768px) {
+  .title-404 {
+    font-size: 80px;
+  }
+
+  .subtitle-404 {
+    font-size: 24px;
+  }
+
+  .description-404 {
+    font-size: 14px;
+  }
+
+  .btn-404 {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
