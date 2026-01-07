@@ -42,19 +42,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.95);
+  padding: 1px 10px;
+  background-color: rgb(222, 40, 40);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-/* ===================================
-   ITEMS DEL MENÚ
-   Enlaces de navegación con efecto hover
-=================================== */
 .nav-item {
-  font-size: 16px;
-  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
   cursor: pointer;
@@ -64,7 +61,12 @@ body {
 .nav-item:hover {
   color: #888888;
 }
-
+.nav-center {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: "Space Grotesk", sans-serif;
+}
 /* ===================================
    SECCIÓN HERO
    Espacio inicial debajo del navbar
@@ -215,7 +217,7 @@ body {
    Pie de página en una sola línea
 =================================== */
 .footer {
-  background-color: #000000;
+  background-color: #44cc29;
   padding: 5px 5px;
 }
 
@@ -234,7 +236,7 @@ body {
 
 .footer-text {
   font-size: 14px;
-  color: #888888;
+  color: #ffffff;
   font-family: "Space Grotesk", sans-serif;
 }
 

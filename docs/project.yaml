@@ -2,49 +2,55 @@
 # This file will be used to generate your entry in the course showroom
 
 # Basic information
-handle: your-github-username
-name: Your Full Name
-email: your-email@udit.es
+handle: martindomlob123
+name: Martin Domingo
+email: martindomlob@gmail.com / martin.domingo@alumnos.udit.es
 
 # URLs (will be auto-generated if you follow naming conventions)
-github_url: https://github.com/your-username
-project_url: https://your-username.github.io/your-project-repo
-repository_url: https://github.com/your-username/your-project-repo
+github_url: https://github.com/martindomlob123
+project_url: https://martindomlob123.github.io/PORTFOLIO_MartinDomingo
+repository_url: https://github.com/martindomlob123/PORTFOLIO_MartinDomingo
 
 # Project details
 title:
-  es: Título de tu Proyecto en Español
-  en: Your Project Title in English
+  es: PORTFOLIO_MartinDomingo
+  en: PORTFOLIO_MartinDomingo
 
 abstract:
   es: |
-    Una descripción concisa de tu proyecto web en español. 
-    Explica qué construyes, para quién y por qué es importante.
+    Una plantilla de un portfolio para uso personal, donde se muestran proyectos realizados y habilidades.
+    Está diseñada para ser accesible y responsiva, adaptándose a diferentes dispositivos.
   en: |
-    A concise description of your web project in English.
-    Explain what you're building, for whom, and why it matters.
+    A portfolio template for personal use, showcasing completed projects and skills.
+    It's designed to be accessible and responsive, adapting to different devices.
 
 # Technical tags (choose relevant ones)
 tags:
   - html5
   - css3
+  - javascript
   - responsive-design
   - accessibility
-  # Add more as relevant: javascript, sass, performance, etc.
+  - performance
+  - github-pages
+  - portfolio
 
 # Learning objectives you're focusing on
 learning_focus:
   - semantic-html
-  - mobile-first-design
+  - responsive-layouts
   - web-accessibility
-  # Add more as you progress
+  - css-architecture
+  - basic-javascript
+  - deployment-with-github-pages
 
 # Week tracking (update as you go)
 milestones:
-  week_1_setup: false
-  week_2_brief: false
-  week_4_metadata: false
-  week_5_showcase: false
+  week_1_setup: true
+  week_2_brief: true
+  week_3_layout: true
+  week_4_metadata: true
+  week_5_showcase: true
 
 # Optional: link to your project brief
 brief_url: project-brief.md

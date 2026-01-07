@@ -2,16 +2,16 @@
 
 ## Trends
 
-- [Trend 1]
-- [Trend 2]
-- [Trend 3]
+- [Typography as Hero]
+- [Soft Motion]
+- [Bento Grids]
 
 ## Visual References
 
-- [Link or moodboard image 1]
-- [Link or moodboard image 2]
-- [Link or moodboard image 3]
+- [https://studioacker.com/]
+- [https://isabelvonderahe.com/]
+- [https://readymag.website/nonobjective/]
 
 ## Theme Draft
 
-[Your project’s core concept—what it’s about]
+A curated digital portfolio focused on visual clarity and purposeful design. The project centers on the 'less is more' philosophy, using intentional white space and precise typography to highlight creative work without distraction.
