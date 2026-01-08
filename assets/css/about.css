@@ -8,6 +8,17 @@
 }
 
 /* ===================================
+   ESTILOS PARA IMÁGENES RESPONSIVAS
+   Asegura que las imágenes se escalen correctamente
+=================================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================================
    ESTILOS GENERALES
 =================================== */
 body {
@@ -15,6 +26,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* ===================================
@@ -227,13 +239,40 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .center-image-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-image {
+    width: 70vw;
+    height: 70vw;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
   .left-paragraphs {
     position: relative;
     left: 0;
     top: auto;
     transform: none;
     max-width: 100%;
-    padding: 80px 30px 120px;
+    padding: 30px 20px;
+    gap: 40px;
   }
 
   .right-paragraphs {
@@ -242,15 +281,57 @@ body {
     top: auto;
     transform: none;
     max-width: 100%;
-    padding: 0 30px 120px;
+    padding: 0 20px 100px;
+    gap: 40px;
+    text-align: left;
   }
 
   .paragraph-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .paragraph-text {
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .footer {
+    position: static;
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .center-image {
+    width: 60vw;
+    height: 60vw;
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .left-paragraphs,
+  .right-paragraphs {
+    padding: 20px 15px;
+    gap: 30px;
+  }
+
+  .right-paragraphs {
+    padding-bottom: 80px;
+  }
+
+  .paragraph-title {
+    font-size: 14px;
+  }
+
+  .paragraph-text {
+    font-size: 11px;
   }
 }
 /* ===================================
@@ -259,8 +340,13 @@ body {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
+    padding: 0 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
   }
 
   .footer-center,
@@ -270,6 +356,24 @@ body {
 
   .footer-links,
   .footer-social {
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer-link,
+  .social-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-text,
+  .footer-link,
+  .social-link {
+    font-size: 10px;
   }
 }

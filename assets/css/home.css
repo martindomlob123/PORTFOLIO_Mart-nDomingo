@@ -14,6 +14,17 @@
 }
 
 /* ===================================
+   ESTILOS PARA IMÁGENES RESPONSIVAS
+   Asegura que las imágenes se escalen correctamente
+=================================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================================
    TIPOGRAFÍA PERSONALIZADA
    Importa la fuente Space Grotesk desde Google Fonts
 =================================== */
@@ -28,6 +39,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* ===================================
@@ -292,8 +304,13 @@ body {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
+    padding: 0 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
   }
 
   .footer-center,
@@ -303,7 +320,25 @@ body {
 
   .footer-links,
   .footer-social {
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer-link,
+  .social-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-text,
+  .footer-link,
+  .social-link {
+    font-size: 10px;
   }
 }
 
@@ -313,32 +348,89 @@ body {
 =================================== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 20px 30px;
+    padding: 10px 15px;
   }
 
   .nav-item {
-    font-size: 14px;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    height: 50vh;
+    padding-top: 100px;
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 15px;
   }
 
   .hero-subtitle {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .parallax-section {
+    padding: 40px 0;
   }
 
   .scroll-container {
-    padding: 0 30px 40px 30px;
-    gap: 24px;
+    padding: 0 20px 30px 20px;
+    gap: 20px;
   }
 
   .project-card {
-    min-width: calc(50vw - 60px);
-    height: 70vh;
+    min-width: calc(80vw - 20px);
+    height: 60vh;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 12px;
   }
 
   .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .hero-section {
+    height: 40vh;
+    padding-top: 80px;
+  }
+
+  .hero-title {
     font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .scroll-container {
+    padding: 0 15px 20px 15px;
+    gap: 15px;
+  }
+
+  .project-card {
+    min-width: calc(90vw - 15px);
+    height: 50vh;
   }
 }

@@ -14,6 +14,17 @@
 }
 
 /* ===================================
+   ESTILOS PARA IMÁGENES RESPONSIVAS
+   Asegura que las imágenes se escalen correctamente
+=================================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================================
    TIPOGRAFÍA PERSONALIZADA
    Importa la fuente Space Grotesk desde Google Fonts
 =================================== */
@@ -28,6 +39,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 /* ===================================
    IMAGEN CENTRAL CON EFECTO BLUR
@@ -56,7 +68,18 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .center-image {
-    width: 300px; /* CAMBIAR ANCHO MÓVIL AQUÍ */
-    height: 300px; /* CAMBIAR ALTO MÓVIL AQUÍ */
+    width: 80vw;
+    height: 80vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-image {
+    width: 70vw;
+    height: 70vw;
+    max-width: 200px;
+    max-height: 200px;
   }
 }

@@ -8,6 +8,17 @@
 }
 
 /* ===================================
+   ESTILOS PARA IMÁGENES RESPONSIVAS
+   Asegura que las imágenes se escalen correctamente
+=================================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================================
    ESTILOS GENERALES
 =================================== */
 body {
@@ -15,6 +26,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* ===================================
@@ -143,37 +155,110 @@ body {
    RESPONSIVE
 =================================== */
 @media (max-width: 768px) {
+  .archive-container {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+  }
+
   .images-section {
     flex-direction: column;
     height: auto;
+    gap: 20px;
+    margin-bottom: 40px;
   }
 
-  .left-image img {
-    height: 50vh;
+  .left-image {
+    width: 100%;
+  }
+
+  .left-image img,
+  .left-image video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
   }
 
   .right-images {
     flex-direction: row;
+    gap: 15px;
   }
 
   .right-images img {
-    width: calc(50% - 15px);
-    height: 30vh;
+    width: calc(50% - 7.5px);
+    height: auto;
+    max-height: 30vh;
+    object-fit: contain;
+  }
+
+  .info-section {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 40px 20px;
   }
 
   .info-content {
     flex-direction: column;
     padding-left: 0;
-    gap: 20px;
+    gap: 15px;
   }
 
   .info-title {
-    font-size: 24px;
+    font-size: 22px;
     min-width: auto;
   }
 
   .info-text {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .archive-container {
+    padding-top: 70px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .images-section {
+    gap: 15px;
+  }
+
+  .left-image img,
+  .left-image video {
+    height: auto;
+    max-height: 40vh;
+  }
+
+  .right-images {
+    gap: 12px;
+  }
+
+  .right-images img {
+    max-height: 25vh;
+  }
+
+  .info-section {
+    padding: 30px 15px;
+  }
+
+  .info-title {
+    font-size: 18px;
+  }
+
+  .info-text {
+    font-size: 12px;
   }
 }
 /* ===================================
